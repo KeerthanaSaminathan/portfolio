@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap');
+
+:root {
+    --main-color: #8e44ad;
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0, 0, 0, .7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+body {
+    background-color:rgb(3, 2, 2);
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::webkit-scrollbar {
+    width: 1rem;
+}
+
+html::webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+html::webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 7rem solid var(--yellow);
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: #222;
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #222;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .navbar ul li {
+    margin:0.1rem;
+}
+
+header .navbar ul li a {
+    display: flex;
+    padding: 1rem;
+    margin:1rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+    background: #ccc;
+}
+
+.heading{
+    text-align: center;
+    margin: 2rem auto 0;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #eee;
+    color:#fff;
+}
+
+.heading span{
+    color:#f9ce0fdd;
+}
+
+.about {
+    width: calc(100% - 35rem); /* Adjust as needed based on the width of the navbar */
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 35rem; /* Width of the navbar */
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.about .row {
+    font-size:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .info .heading {
+    font-size: 5rem; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 2rem; /* Add margin to create a gap */
+}
+
+.about .row .info {
+    width: 50%;
+    padding-right: 20px;
+    margin-bottom: 7rem;
+}
+
+.about .row .container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .container .box {
+    width: 20rem;
+    background: #777;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .container .span {
+    font-size: 4rem;
+    color:#f9ce0fdd;
+}
+
+.about .row .info h3 {
+    font-size: 2.5rem;
+    color:#fff; /* Default color for most elements */
+    padding: 1rem 0; /* Add padding to create a small gap between each element */
+    font-weight: bold; /* Make the text bold */
+}
+
+.about .row .info h3 span{
+    color:#fff;
+    padding: 0 .5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    header,
+    .navbar,
+    .about {
+        width: 100%;
+    }
+}
+
+.about .row .info {
+    width: 80%; /* Adjust as needed */
+}
+
+.about .row .container {
+    width: 80%; /* Adjust as needed */
+}

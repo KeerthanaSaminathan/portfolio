@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap');
+
+:root {
+    --main-color: #8e44ad;
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0, 0, 0, .7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+body {
+    background-color:rgb(3, 2, 2);
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::webkit-scrollbar {
+    width: 1rem;
+}
+
+html::webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+html::webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 7rem solid var(--yellow);
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: #222;
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #222;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .navbar ul li {
+    margin:0.1rem;
+}
+
+header .navbar ul li a {
+    display: flex;
+    padding: 1rem;
+    margin:1rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+    background: #ccc;
+}
+
+#menu {
+    position: fixed;
+    top:2rem;
+    bottom:2rem;
+    left: calc(35rem + 2rem); /* Adjust as needed */
+    width: calc(100% - (35rem + 2rem)); /* Adjust as needed */
+    height: 100vh;
+    background: #000 url("./images/crt.jpg") top center;
+    background-size: cover;
+    color:#333;
+    display: flex; 
+    justify-content: flex-end; /* Align items to the right */
+}
+
+#menu::before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#menu .menu-container {
+    padding: 2rem;
+    margin-top: 23rem;
+
+}
+
+#menu h1 {
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-right:15rem;
+    margin-top: 5rem; /* Remove default margin */
+}
+
+#menu p {
+    font-size: 56px;
+    font-family: "Poppins", sans-serif;
+    margin-left:15rem;
+    margin-top: 1rem; /* Remove default margin */
+}
+
+#menu p span {
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+
+@media(min-width:1024px){
+    #menu{
+        background-attachment: fixed;
+    }
+}
+
+@media(max-width:768px){
+    #menu h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    #menu p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+.heading{
+    text-align:center;
+    margin:0 6rem;
+    font-size:4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff
+}
+
+.about .row{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    padding:1rem 0;
+}
+
+.about .row .info{
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{
+    font-size: 2rem;
+    color:var(--yellow);
+    padding:1rem 0;
+    font-weight:normal;
+}
+
+.about .row .info h3 span{
+    color:#eee;
+    padding:0 0.5rem;
+
+}
+
+.about .row .container{
+    flex:1 1 48rem;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.about .row .container .box{
+    width:20rem;
+    background:#f9ce0fdd;
+    text-align:center;
+    padding:2rem;
+    margin:2rem;
+}
+
+.about .row .container .box h3{
+    font-size:2rem;
+    color:var(--yellow);
+    
+}
